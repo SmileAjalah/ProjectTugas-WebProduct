@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andikari</title>
+    <link rel="stylesheet" href="../bootstrap-4.6.2-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="body.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <a class="navbar-brand" href="#">Andikari</a>
+        <button class="openbtn" onclick="openSidebar()">&#9776; Sidebar</button>
+    </nav>
+
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">&times;</a>
+        <a href="welcome.html">Selamat Datang</a>
+        <a href="info.html">Info</a>
+        <button class="dropdown-btn">Produk<i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a href="produk.html">Produk</a>
+            <a href="#">Troli</a>
+        </div>
+        <a href="#contact">Profil</a>
+    </div>
+    <!-- Side navigation -->
+
+    <!-- Page content -->
+    <div class="main">
+        <h1 style="margin-top: 30px;margin-left: 335px;color: #ecf0f1;font-size: 50px;">Info Kami</h1>
+        <div class="dropdown">
+            <h1 class="text-white">Barang Bekas</h1>
+            <p>
+                <a class="btn btn-primary" data-toggle="collapse" href="#barangbekas" role="button"
+                    aria-expanded="false" aria-controls="barangbekas">
+                    Apa itu barang bekas?
+                </a>
+            <p style="margin-left: 1%;">
+                <a class="btn btn-primary" data-toggle="collapse" href="#collapseExamplet" role="button"
+                    aria-expanded="false" aria-controls="collapseExample">
+                    Kegunaan Barang Bekas
+                </a>
+            </p>
+            </p>
+            <br>
+            <div class="collapse" id="barangbekas" style="margin-top: 30px;padding-right: 100px;">
+                <div class="d-flex">
+                    <div class="card card-body" style="width: 70%;">
+                        <h1>Barang Bekas</h1>
+                        Barang bekas = barang bekas adalah barang yang sudah tidak terpakai, tapi beberapa di antaranya
+                        masih dapat dimanfaatkan kembali. Sebab, tidak semua barang bekas tidak bisa digunakan lagi
+                        karena rusak atau hancur. Ada juga barang bekas yang masih dalam kondisi baik namun tidak ingin
+                        digunakan lagi.
+                    </div>
+                    <div class="card card-body ml-5">
+                        <img src="barangbekas.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="collapse" id="collapseExamplet" style="margin-top: 30px;padding-right: 100px;">
+                <div class="d-flex">
+                    <div class="card card-body" style="width: 70%;">
+                        <h1>Kegunaanya</h1>
+                        membuat kerajinan tangan dari barang bekas, Anda dapat lebih menghemat pengeluaran untuk membeli barang-barang tertentu. Atau misalnya, untuk membeli hadiah untuk teman yang berulang tahun kita bisa berhemat dengan membuat hadiah itu dari barang bekas.
+                    </div>
+                    <div class="card card-body ml-5">
+                        <img src="daurulang.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <p class="mt-5">
+                <a class="btn btn-primary" data-toggle="collapse" href="#Tujuan" role="button"
+                    aria-expanded="false" aria-controls="Tujuan">
+                    Tujuannya
+                </a>
+            <p class="mt-5" style="margin-left: 1%;">
+                <a class="btn btn-primary" data-toggle="collapse" href="#collapseExamplett" role="button"
+                    aria-expanded="false" aria-controls="collapseExample">
+                    Mengapa harus di kami?
+                </a>
+            </p>
+            </p>
+            <div class="collapse" id="Tujuan" style="margin-top: 120px;padding-right: 100px;">
+                <div class="d-flex">
+                    <div class="card card-body" style="width: 70%;">
+                        <h1>Tujuan</h1>
+                        Untuk menjual dan membeli barang bekas, dan ini bisa dibeli dengan harga yang cukup murah.
+                    </div>
+                    <div class="card card-body ml-5">
+                        <img src="jual beli.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="collapse" id="collapseExamplett" style="margin-top: 30px;padding-right: 100px;">
+                <div class="d-flex">
+                    <div class="card card-body" style="width: 70%;">
+                        <h1>Mengapa Harus Kami?</h1>
+                        Karena kami menjual barang yang cukup murah, walaupun murah barang kami tetap bagus untuk dipakai dan bahannya juga yang masih bagus.
+                    </div>
+                    <div class="card card-body ml-5">
+                        <img src="daurulang.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="sidebar.js"></script>
+    <script src="../bootstrap-4.6.2-dist/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+        integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+</body>
+
+</html>

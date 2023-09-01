@@ -12,27 +12,30 @@
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="sidebar.css">
     <link rel="stylesheet" href="text.css">
+    <link rel="stylesheet" href="body.css">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <a class="navbar-brand" href="#">Andikari</a>
+        <button class="openbtn" onclick="openSidebar()">&#9776; Sidebar</button>
     </nav>
 
-    <!-- Side navigation -->
-    <div class="sidenav">
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">&times;</a>
         <a href="welcome.html">Selamat Datang</a>
-        <a href="#services">Info</a>
+        <a href="info.html">Info</a>
         <button class="dropdown-btn">Produk<i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-container">
-            <a href="#">Produk</a>
+            <a href="produk.html">Produk</a>
             <a href="#">Troli</a>
         </div>
         <a href="#contact">Profil</a>
     </div>
+    <!-- Side navigation -->
 
     <!-- Page content -->
     <div class="main">
@@ -50,7 +53,7 @@
         <h1 style="width:244px;font-size:36px; line-height:40px; font-family:'Muli'; color:#ecf0f1; height:40px; position:absolute;  top:50%; left:960px; margin-top:-15px; margin-left:-118px;"><strong>Di</strong></h1>
         <h1 style="margin-top: 30px; margin-left: 430px;color: #ecf0f1;font-size: 30px;">Site Andikari</h1>
     </div>
-
+    <script src="sidebar.js"></script>
     <script src="../bootstrap-4.6.2-dist/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -74,22 +77,5 @@
     <script
         src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
 </body>
-<script>
-    //* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
-    var dropdown = document.getElementsByClassName("dropdown-btn");
-    var i;
-
-    for (i = 0; i < dropdown.length; i++) {
-        dropdown[i].addEventListener("click", function () {
-            this.classList.toggle("active");
-            var dropdownContent = this.nextElementSibling;
-            if (dropdownContent.style.display === "block") {
-                dropdownContent.style.display = "none";
-            } else {
-                dropdownContent.style.display = "block";
-            }
-        });
-    }
-</script>
 
 </html>
