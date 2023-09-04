@@ -12,6 +12,7 @@
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="sidebar.css">
     <link rel="stylesheet" href="body.css">
+    <link rel="stylesheet" href="rating.css">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
 </head>
@@ -20,6 +21,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <a class="navbar-brand" href="#">Andikari</a>
         <button class="openbtn" onclick="openSidebar()">&#9776; Sidebar</button>
+        <a class="ml-auto text-white" href="">Log In</a>
     </nav>
 
     <div id="mySidebar" class="sidebar">
@@ -29,8 +31,8 @@
         <button class="dropdown-btn">Produk<i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-container">
-            <a href="#">Produk</a>
-            <a href="#">Troli</a>
+            <a href="produk.html">Produk</a>
+            <a href="troli.html">Troli</a>
         </div>
         <a href="#contact">Profil</a>
     </div>
@@ -131,7 +133,7 @@
                     <div class="modal-body">
                         <div style="margin-left: 80px;" id="exampleModalCenterTitle"><img src="Gambarcard.svg" alt="">
                         </div>
-                        <ul class="nav nav-tabs mt-3">
+                        <ul class="nav nav-tabs mt-3" style="font-size: large;">
                             <li class="nav-item">
                                 <a class="nav-link active" href="#">Type 1</a>
                             </li>
@@ -156,7 +158,7 @@
                         <div class="collapse" id="Komentar" style="margin-top: 10px;padding-right: px;">
                             <div class="d-flex">
                                 <div class="card card-body" style="width: 70%;">
-                                    <h1 style="margin-left: 120px;">Komentar</h1>
+                                    <h3 style="margin-left: 150px;">Komentar</h3>
                                     <div class="row">
                                         <div class="col-2">
                                             <img class="rounded-circle" style="width: 60px;height: 60px;"
@@ -165,7 +167,7 @@
                                         <div class="col-10">
                                             <div class="row">
                                                 <div class="col-7">
-                                                    <h3>User</h3>
+                                                    <h5>User</h5>
                                                 </div>
                                                 <div class="col-5">
                                                     <div class="row">
@@ -182,7 +184,8 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                                            <p style="font-size: large;">Lorem ipsum dolor, sit amet consectetur
+                                                adipisicing elit.</p>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -193,7 +196,7 @@
                                         <div class="col-10">
                                             <div class="row">
                                                 <div class="col-7">
-                                                    <h3>User#2</h3>
+                                                    <h5>User#2</h5>
                                                 </div>
                                                 <div class="col-5">
                                                     <div class="row">
@@ -210,10 +213,14 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <p>User ini tak meninggalkan tapi meninggalkan rating <strong>4,5</strong>
+                                            <p style="font-size: large;">User ini tak meninggalkan pesan tapi
+                                                meninggalkan rating <strong>4,5</strong>
                                             </p>
                                         </div>
                                     </div>
+                                    <a class="btn btn-outline-secondary" href="#sendComment" data-toggle="modal"
+                                        role="button" aria-expanded="false" aria-controls="sendComment">Tinggalkan
+                                        Komentar/Rating</a>
                                 </div>
                             </div>
                         </div>
@@ -224,6 +231,47 @@
                                     data-placement="bottom" title="Nama Produk Lain"></div>
                             <div class="col-6"><img src="Gambarcard.svg" alt="" width="200px" data-toggle="tooltip"
                                     data-placement="bottom" title="Nama Produk Lain"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="sendComment" tabindex="-1" aria-labelledby="sendComment" aria-hidden="true" style="margin-left: -17px;">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="SendTitle">Kirim Komentar/Rating</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <h5>Nama User</h5>
+                                    </div>
+                                    <div class="col-6">
+                                        <p><span class="star-rating">
+                                            <label for="rate-1" style="--i:1"><i class="fa fa-star"></i></label>
+                                            <input type="radio" name="rating" id="rate-1" value="1">
+                                            <label for="rate-2" style="--i:2"><i class="fa fa-star"></i></label>
+                                            <input type="radio" name="rating" id="rate-2" value="2" checked>
+                                            <label for="rate-3" style="--i:3"><i class="fa fa-star"></i></label>
+                                            <input type="radio" name="rating" id="rate-3" value="3">
+                                            <label for="rate-4" style="--i:4"><i class="fa fa-star"></i></label>
+                                            <input type="radio" name="rating" id="rate-4" value="4">
+                                            <label for="rate-5" style="--i:5"><i class="fa fa-star"></i></label>
+                                            <input type="radio" name="rating" id="rate-5" value="5">
+                                        </span></p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlTextarea1">Pesan</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                  </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                                <button type="button" class="btn btn-primary">Kirim</button>
+                            </div>
                         </div>
                     </div>
                 </div>
