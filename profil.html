@@ -16,6 +16,12 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
 </head>
 
+<style>
+    .bg-blur {
+        backdrop-filter: blur(5px);
+    }
+</style>
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <a class="navbar-brand" href="#">Andikari</a>
@@ -126,8 +132,8 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Keluar</button>
-                        <button type="button" class="btn btn-primary" data-toggle="modal"
-                        data-target="#editProfil">Ubah Profil</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editProfil">Ubah
+                            Profil</button>
                     </div>
                 </div>
             </div>
@@ -152,8 +158,8 @@
                             </div>
                             <form>
                                 <div class="form-group">
-                                  <label for="exampleFormControlFile1">Ubah Foto Profil</label>
-                                  <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                    <label for="exampleFormControlFile1">Ubah Foto Profil</label>
+                                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
                                 </div>
                             </form>
                         </div>
@@ -208,13 +214,52 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary mr-auto">Ubah Password</button>
+                        <button type="button" class="btn btn-primary mr-auto" data-toggle="modal"
+                            data-target="#password">Ubah Password</button>
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Kembali</button>
                         <button type="button" class="btn btn-primary">Simpan Perubahan</button>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="modal fade bg-blur" id="password" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ubah Password</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password Lama</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword2">Password Baru</label>
+                            <input type="password" class="form-control" id="exampleInputPassword2">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword3">Ulangi Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword3">
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Klik Ini Untuk Verifikasi</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Kembali</button>
+                    <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+                </div>
+            </div>
+        </div>
+    </div>
     </div>
 
     <div class="main">
