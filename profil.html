@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andikari</title>
+    <link rel="stylesheet" href="../bootstrap-4.6.2-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="body.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <a class="navbar-brand" href="#">Andikari</a>
+        <button class="openbtn" onclick="openSidebar()">&#9776; Sidebar</button>
+        <a class="ml-auto text-white" href="#login" data-toggle="modal" role="button" aria-expanded="false"
+            aria-controls="login">Log Out</a>
+    </nav>
+
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">&times;</a>
+        <a href="welcome.html">Selamat Datang</a>
+        <a href="info.html">Info</a>
+        <button class="dropdown-btn">Produk<i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a href="produk.html">Produk</a>
+            <a href="troli.html">Troli</a>
+        </div>
+        <a href="profil.html">Profil</a>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+        <a class="navbar-brand" href="#">
+            <div class="rounded-circle border border-dark" style="width: 50px;" role="button" data-toggle="modal"
+                data-target="#profil"><i class="fa fa-user text-dark" aria-hidden="true"
+                    style="font-size: 40px;margin-left: 8px;" data-toggle="tooltip" data-placement="bottom"
+                    title="Profil"></i></div>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <h4 class="text-dark" style="margin-top: 2px;">UserName</h4>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="modal fade" id="profil" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Profil</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row mb-2">
+                        <div class="col-4">
+                            <div class="rounded-circle border border-dark" style="width: 200px;height: 200px;"><i
+                                    class="fa fa-user text-dark" aria-hidden="true"
+                                    style="font-size: 180px;margin-left: 29px;margin-top: 6px;"></i>
+                            </div>
+                        </div>
+                        <div class="col-7">
+                            <div class="row">
+                                <div class="col-6">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="NickName">Nama Pengguna</label>
+                                            <input type="text" class="form-control" id="NickName"
+                                                aria-describedby="emailHelp" disabled value="User">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-6">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="NickName">Email</label>
+                                            <input type="text" class="form-control" id="NickName"
+                                                aria-describedby="emailHelp" disabled value="HeyTayo12@gmail.com">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="NickName">Barang Yang Dibeli</label>
+                                            <input type="text" class="form-control" id="NickName"
+                                                aria-describedby="emailHelp" disabled value="1.863.889">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-6">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="NickName">Umur Akun</label>
+                                            <input type="text" class="form-control" id="NickName"
+                                                aria-describedby="emailHelp" disabled value="1 Bulan, 23 Hari">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <form>
+                                <div class="form-group">
+                                    <label for="exampleFormControlTextarea1">Bio</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"
+                                        disabled>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit pariatur, id inventore quasi facere soluta illo provident, quam facilis asperiores et ea est eaque reiciendis voluptatum dolorem minima dolorum tempore.</textarea>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Keluar</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                        data-target="#editProfil">Ubah Profil</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="editProfil" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Edit Profil</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row mb-2">
+                        <div class="col-4">
+                            <div class="rounded-circle border border-dark" style="width: 200px;height: 200px;"><i
+                                    class="fa fa-user text-dark" aria-hidden="true"
+                                    style="font-size: 180px;margin-left: 29px;margin-top: 6px;"></i>
+                            </div>
+                            <form>
+                                <div class="form-group">
+                                  <label for="exampleFormControlFile1">Ubah Foto Profil</label>
+                                  <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-7">
+                            <div class="row">
+                                <div class="col-6">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="NickName">Nama Pengguna</label>
+                                            <input type="text" class="form-control" id="NickName"
+                                                aria-describedby="emailHelp" value="User">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-6">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="NickName">Email</label>
+                                            <input type="text" class="form-control" id="NickName"
+                                                aria-describedby="emailHelp" disabled value="HeyTayo12@gmail.com">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="NickName">Barang Yang Dibeli</label>
+                                            <input type="text" class="form-control" id="NickName"
+                                                aria-describedby="emailHelp" disabled value="1.863.889">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-6">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="NickName">Umur Akun</label>
+                                            <input type="text" class="form-control" id="NickName"
+                                                aria-describedby="emailHelp" disabled value="1 Bulan, 23 Hari">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <form>
+                                <div class="form-group">
+                                    <label for="exampleFormControlTextarea1">Bio</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1"
+                                        rows="5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit pariatur, id inventore quasi facere soluta illo provident, quam facilis asperiores et ea est eaque reiciendis voluptatum dolorem minima dolorum tempore.</textarea>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary mr-auto">Ubah Password</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Kembali</button>
+                        <button type="button" class="btn btn-primary">Simpan Perubahan</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="container-fluid">
+
+        </div>
+    </div>
+    <script src="sidebar.js"></script>
+    <script src="../bootstrap-4.6.2-dist/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+        integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+</body>
+
+</html>
+<!-- <div class="row">
+                <div class="col-1 mt-3" style="margin-left: -215px;"><div class="rounded-circle border" style="width: 50px;"><i class="fa fa-user text-white" aria-hidden="true" style="font-size: 40px;margin-left: 8px;"></i></div></div>
+                <div class="col-2 mt-3 text-white" style="margin-left: -30px;">User Name</div>
+            </div> -->
